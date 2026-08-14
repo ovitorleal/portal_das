@@ -1,36 +1,26 @@
-# Portal da Vigilância em Saúde de Volta Redonda
+# Portal do Departamento de Atenção à Saúde — Volta Redonda
 
-## 📝 Sobre o Projeto
+## 📝 Sobre
 
-O **Portal da Vigilância em Saúde de Volta Redonda** é uma iniciativa para centralizar e facilitar o acesso a dados e informações relevantes sobre a saúde pública no município de Volta Redonda, RJ. O projeto visa oferecer uma plataforma intuitiva para que cidadãos e profissionais de saúde possam consultar painéis de dados, documentos e materiais de apoio de diferentes departamentos de vigilância.
+O **Portal DAS** é um site que reúne em um só lugar os painéis de dados e documentos de apoio das divisões do Departamento de Atenção à Saúde (DAS) da Secretaria Municipal de Saúde de Volta Redonda – RJ.
 
-Este projeto está sendo desenvolvido como uma forma de aprimorar as habilidades de programação e, ao mesmo tempo, criar uma ferramenta útil para a comunidade.
+A ideia é facilitar o acesso a informações de saúde do município para gestores, profissionais e cidadãos.
 
-## 💻 Status do Projeto
+## 🏛️ Divisões do Portal
 
-O portal está **em desenvolvimento**. Algumas seções e painéis de dados ainda estão em fase de construção e serão adicionados futuramente.
+| Divisão | O que você encontra | Status |
+|---|---|---|
+| **Atenção Básica (DAB)** | Indicadores de qualidade das equipes de Saúde da Família, vínculo territorial, agendas e absenteísmo | ✅ Disponível |
+| **Média Complexidade (DMC)** | Dados e documentos sobre serviços de média complexidade | 🚧 Em breve |
+| **Educação Permanente** | Materiais de capacitação e formação profissional em saúde | 🚧 Em breve |
+| **Pactuação Bipartite** | Indicadores pactuados entre o município e o estado (SES-RJ) | ✅ Disponível |
 
-## 🏛️ Estrutura do Portal
+## 💡 Como funciona
 
-O portal é organizado nos seguintes departamentos, cada um com sua própria página de painéis e materiais de apoio:
-
-* **Vigilância Ambiental**: Seção destinada a informações e dados sobre fatores ambientais que afetam a saúde. (Em desenvolvimento)
-* **Vigilância Epidemiológica**: Apresenta painéis sobre o cenário epidemiológico de doenças e agravos no município, como Dengue, Sífilis, dados vitais e cobertura vacinal.
-* **Vigilância Sanitária**: Focada em dados relacionados a estabelecimentos e serviços de interesse sanitário. (Em desenvolvimento)
-* **Saúde do Trabalhador (CEREST)**: Disponibiliza informações sobre a saúde e segurança dos trabalhadores no município. (Em desenvolvimento)
-*  **Indicadores de Pactuação Bipartite**: Apresenta os Indicadores de Pactuação Bipartite do município até o momento (2025) além do Indicador pactuado no Município e a meta da SES-RJ(Secretaria Estadual de Saúde-RJ)
-
-## ✨ Funcionalidades
-
-* **Página Inicial**: Apresenta os principais departamentos para navegação.
-* **Páginas de Departamentos**: Cada seção possui sua própria página com:
-    * **Painéis de Dados**: Cards que redirecionam para painéis interativos (majoritariamente em Looker Studio) com dados específicos.
-    * **Material de Apoio**: Links para documentos, notas técnicas e protocolos relevantes, geralmente armazenados em drives na nuvem.
-* **Design Responsivo**: Interface adaptável para visualização em diferentes tamanhos de tela.
-* **Consentimento de Cookies**: Um banner informativo sobre o uso de cookies para melhorar a experiência do usuário.
-
+1. Na **página inicial**, você escolhe a divisão que deseja consultar.
+2. Dentro de cada divisão, encontra **painéis interativos** com gráficos e dados atualizados, além de **materiais de apoio** como notas técnicas e protocolos.
+3. O portal funciona em computador, tablet e celular.
 
 ## 👨‍💻 Desenvolvedor
 
-Este portal foi desenvolvido e idealizado por **[Vitor Leal](https://www.github.com/ovitorleal)**.
-
+Projeto idealizado e desenvolvido por **[Vitor Leal](https://www.github.com/ovitorleal)**.
