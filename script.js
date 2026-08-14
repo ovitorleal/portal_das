@@ -63,14 +63,14 @@ const PortalData = [
     {
         id: 'dmc',
         title: 'Média Complexidade',
-        description: 'Dados, informações e documentos sobre a Divisão de Média Complexidade.',
+        description: 'Dados, informações e documentos sobre a Divisão de Média Complexidade. <br> EM CONSTRUÇÃO ⚠️',
         url: '/pages/dmc/index.html', //caminho atualizado
         gradient: 'dmc'
     },
     {
         id: 'educacao',
         title: 'Educação Permanente',
-        description: '⚠️ EM CONSTRUÇÃO ⚠️',
+        description: 'Materiais de capacitação e formação profissional em saúde. <br> EM CONSTRUÇÃO ⚠️',
         url: '/pages/educacao/index.html', // caminho atualizado
         gradient: 'educacao'
     },
