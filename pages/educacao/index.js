@@ -54,21 +54,14 @@ const AnimationManager = {
 // SEÇÃO DE PAINÉIS
 const PanelData = [
     {
-        id: 'atividades',
-        title: 'Atividades Econômicas',
-        description: 'Dados sobre atividades econômicas e setores produtivos no município.',
-        url: 'https://lookerstudio.google.com/reporting/346aea6c-f919-4f62-9eb0-5827eb69ea47',
-        icon: 'heart',
-        gradient: 'vitais'
+        id: 'construcao',
+        title: 'EM CONSTRUÇÃO ⚠️',
+        description: 'PAINEL EM FASE DE DESENVOLVIMENTO',
+        url: '#',
+        icon: 'activity',
+        gradient: 'construcao'
     },
-    {
-        id: 'material-biologico',
-        title: 'Material Biológico',
-        description: 'Dados sobre Acidentes com Material Biológico no município.',
-        url: 'https://lookerstudio.google.com/reporting/6e28181c-2143-482d-88ff-87abe07b6a83',
-        icon: 'users',
-        gradient: 'mat-bio'
-    }
+
 ];
 
 // SEÇÃO DE MATERIAL DE APOIO
@@ -76,7 +69,7 @@ const SupportData = [
     {
         id: 'construcao',
         title: 'EM CONSTRUÇÃO',
-        description: 'PAINEL EM FASE DE DESENVOLVIMENTO⚠️', 
+        description: 'PAINEL EM FASE DE DESENVOLVIMENTO ⚠️' ,
         url: '#',
         icon: 'activity',
         gradient: 'construcao'

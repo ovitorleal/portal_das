@@ -5,7 +5,7 @@ const CookieManager = {
         expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
         document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
     },
-    
+
     get: (name) => {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
@@ -16,7 +16,7 @@ const CookieManager = {
         }
         return null;
     },
-    
+
     exists: (name) => {
         return document.cookie.split(';').some((item) => item.trim().startsWith(`${name}=`));
     }
@@ -41,7 +41,7 @@ const AnimationManager = {
                     }
                 });
             },
-            { 
+            {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             }
@@ -54,33 +54,27 @@ const AnimationManager = {
 // DADOS DOS CARDS PRINCIPAIS
 const PortalData = [
     {
-        id: 'ambiental',
-        title: 'Vigilância Ambiental',
-        description: '⚠️ EM CONSTRUÇÃO ⚠️',
-        url: '/pages/ambiental/index.html', // caminho atualizado
-        gradient: 'ambiental'
+        id: 'dab',
+        title: 'Atenção Básica',
+        description: 'Painéis, documentos e materiais de apoio da Divisão Atenção Básica.',
+        url: '/pages/dab/index.html', // caminho atualizado
+        gradient: 'dab'
     },
     {
-        id: 'epidemiologica',
-        title: 'Vigilância Epidemiológica',
-        description: 'Dados e informações sobre o cenário epidemiológico do município.',
-        url: '/pages/epidemio/index.html', //caminho atualizado
-        gradient: 'epidemiologica'
+        id: 'dmc',
+        title: 'Média Complexidade',
+        description: 'Dados, informações e documentos sobre a Divisão de Média Complexidade.',
+        url: '/pages/dmc/index.html', //caminho atualizado
+        gradient: 'dmc'
     },
     {
-        id: 'sanitaria',
-        title: 'Vigilância Sanitária',
+        id: 'educacao',
+        title: 'Educação Permanente',
         description: '⚠️ EM CONSTRUÇÃO ⚠️',
-        url: '/pages/sanitaria/index.html', // caminho atualizado
-        gradient: 'sanitaria'
+        url: '/pages/educacao/index.html', // caminho atualizado
+        gradient: 'educacao'
     },
-    {
-        id: 'trabalhador',
-        title: 'Saúde do Trabalhador',
-        description: '⚠️ EM CONSTRUÇÃO ⚠️',
-        url: '/pages/trabalhador/index.html', // caminho atualizado
-        gradient: 'trabalhador'
-    },
+
     {
         id: 'pactuacao',
         title: 'Pactuação Bipartite',
@@ -94,7 +88,7 @@ const PortalData = [
 const renderCards = () => {
     const cardsGrid = document.getElementById('cards-grid');
     if (!cardsGrid) return;
-    
+
     let cardsHtml = '';
     PortalData.forEach((panel) => {
         cardsHtml += `
@@ -105,7 +99,7 @@ const renderCards = () => {
             </a>
         `;
     });
-    
+
     cardsGrid.innerHTML = cardsHtml;
 };
 
@@ -116,7 +110,7 @@ const renderCookieConsent = () => {
         if (consentContainer) consentContainer.innerHTML = '';
         return;
     }
-    
+
     const cookieHtml = `
         <div class="cookie-consent show">
             <div class="cookie-content">
@@ -148,7 +142,7 @@ const init = () => {
     setTimeout(() => {
         renderCookieConsent();
     }, 1000);
-    
+
     // Event listeners
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && document.querySelector('.cookie-consent.show')) {

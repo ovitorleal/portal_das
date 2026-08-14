@@ -5,7 +5,7 @@ const CookieManager = {
         expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
         document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
     },
-    
+
     get: (name) => {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
@@ -16,7 +16,7 @@ const CookieManager = {
         }
         return null;
     },
-    
+
     exists: (name) => {
         return document.cookie.split(';').some((item) => item.trim().startsWith(`${name}=`));
     }
@@ -41,7 +41,7 @@ const AnimationManager = {
                     }
                 });
             },
-            { 
+            {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             }
@@ -51,35 +51,38 @@ const AnimationManager = {
     }
 };
 
-// SEÇÃO DE PAINÉIS
+// Seção dos cards de painéis
 const PanelData = [
     {
         id: 'construcao',
-        title: 'EM CONSTRUÇÃO',
-        description: 'PAINEL EM FASE DE DESENVOLVIMENTO ⚠️',
+        title: 'EM CONSTRUÇÃO ⚠️',
+        description: 'PAINEL EM FASE DE DESENVOLVIMENTO',
         url: '#',
         icon: 'activity',
         gradient: 'construcao'
     },
+
+
 ];
 
-// SEÇÃO DE MATERIAL DE APOIO
+// CARDS DE MATERIAL DE APOIO
 const SupportData = [
     {
         id: 'construcao',
-        title: 'EM CONSTRUÇÃO',
-        description: 'PAINEL EM FASE DE DESENVOLVIMENTO ⚠️',
+        title: 'EM CONSTRUÇÃO ⚠️',
+        description: 'PAINEL EM FASE DE DESENVOLVIMENTO',
         url: '#',
         icon: 'activity',
         gradient: 'construcao'
     },
+
 ];
 
-// Main Rendering Function
+// Função de renderização principal - cards
 const renderCards = () => {
     const cardsGrid = document.getElementById('cards-grid');
     if (!cardsGrid) return;
-    
+
     let cardsHtml = '';
     PanelData.forEach((panel) => {
         cardsHtml += `
@@ -90,7 +93,7 @@ const renderCards = () => {
             </a>
         `;
     });
-    
+
     cardsGrid.innerHTML = cardsHtml;
 };
 
@@ -109,18 +112,18 @@ const renderSupportCards = () => {
             </a>
         `;
     });
-    
+
     cardsGrid.innerHTML = cardsHtml;
 };
 
-// Render Cookie Consent
+// Render Cookie Consentimento
 const renderCookieConsent = () => {
     const consentContainer = document.getElementById('cookie-consent-container');
     if (CookieManager.exists('cookie_consent')) {
         if (consentContainer) consentContainer.innerHTML = '';
         return;
     }
-    
+
     const cookieHtml = `
         <div class="cookie-consent show">
             <div class="cookie-content">
@@ -153,7 +156,7 @@ const init = () => {
     setTimeout(() => {
         renderCookieConsent();
     }, 1000);
-    
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && document.querySelector('.cookie-consent.show')) {
             CookieManager.set('cookie_consent', 'true', 365);

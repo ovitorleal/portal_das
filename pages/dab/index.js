@@ -54,20 +54,46 @@ const AnimationManager = {
 // SEÇÃO DE PAINÉIS
 const PanelData = [
     {
-        id: 'construcao',
-        title: 'EM CONSTRUÇÃO ⚠️',
-        description: 'PAINEL EM FASE DE DESENVOLVIMENTO',
-        url: '#',
-        icon: 'activity',
-        gradient: 'construcao'
+        id:
+            'indicadores',
+        title:
+            'Componente Qualidade - Equipes Saúde da Família e Atenção Primária',
+        url:
+            'https://datastudio.google.com/s/n64D-UVr0Zs', // link para painel Ciro - att 03/08
+        gradient:
+            'indicadores'
+    },
+
+    {
+        id:
+            'cadeia-consultorio-rua',
+        title:
+            'Componente Qualidade - Cadeia Pública e Consultório na Rua',
+        url:
+            'https://datastudio.google.com/reporting/36276796-ecb1-4729-9a0e-daf059b68b5d',
+        gradient:
+            'cadeia-consultorio-rua'
+    },
+
+    {
+        id:
+            'vinculo-acompanhamento',
+        title:
+            'Componente Vínculo e Acompanhamento Territorial',
+        url:
+            'https://datastudio.google.com/reporting/1f15b7d3-a96b-4e16-834b-2971b73f4ccd',
+        gradient:
+            'vinculo-acompanhamento'
     },
     {
-        id: 'farmacias',
-        title: 'Drogarias, Farmácias e Distribuidoras (2024)',
-        description: 'Distribuição geográfica de farmácias, drogarias e distribuidoras no município no ano de 2024.',
-        url: 'https://lookerstudio.google.com/reporting/7bf535bc-7c4d-4121-983f-f7c77286da43',
-        icon: 'activity',
-        gradient: 'farmacias'
+        id:
+            'agendamentos',
+        title:
+            'Agendas e Absenteísmo',
+        url:
+            'https://app.powerbi.com/view?r=eyJrIjoiMzNjZTRiZjktMDg2ZS00MDU5LTk3NWUtMmFmYTlhZGI0MjJjIiwidCI6ImUxOWVhYzBhLTJiZWEtNGYxMi04Yzg3LWNkNzk5YTg0MDhhZCJ9', // link para BI desenvolvido peli DIPIQ
+        gradient:
+            'agendamentos'
     },
 ];
 
@@ -76,7 +102,7 @@ const SupportData = [
     {
         id: 'construcao',
         title: 'EM CONSTRUÇÃO',
-        description: 'PAINEL EM FASE DE DESENVOLVIMENTO ⚠️' ,
+        description: 'PAINEL EM FASE DE DESENVOLVIMENTO ⚠️',
         url: '#',
         icon: 'activity',
         gradient: 'construcao'
@@ -94,8 +120,7 @@ const renderCards = () => {
             <a href="${panel.url}" class="card ${panel.gradient}" target="_blank" rel="noopener noreferrer" aria-label="Abrir painel ${panel.title}" role="button" tabindex="0">
                 <div class="card-gradient"></div>
                 <h3 class="card-title">${panel.title}</h3>
-                <p class="card-description">${panel.description}</p>
-            </a>
+                        </a>
         `;
     });
     
