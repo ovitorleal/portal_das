@@ -79,7 +79,7 @@ const PortalData = [
         id: 'pactuacao',
         title: 'Pactuação Bipartite',
         description: 'Dados sobre a pactuação bipartite no município.',
-        url: 'https://lookerstudio.google.com/reporting/f1fbd188-4c7c-4814-959d-1d2279e60c55', // link atualizado 23/10 para looker dos indicadores.
+        url: 'https://lookerstudio.google.com/reporting/f1fbd188-4c7c-4814-959d-1d2279e60c55', // link atualizado 17/08/26 para looker dos indicadores.
         gradient: 'indicadores'
     }
 ];
