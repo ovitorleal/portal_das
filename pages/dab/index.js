@@ -5,7 +5,7 @@ const CookieManager = {
         expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
         document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
     },
-    
+
     get: (name) => {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
@@ -16,7 +16,7 @@ const CookieManager = {
         }
         return null;
     },
-    
+
     exists: (name) => {
         return document.cookie.split(';').some((item) => item.trim().startsWith(`${name}=`));
     }
@@ -41,7 +41,7 @@ const AnimationManager = {
                     }
                 });
             },
-            { 
+            {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             }
@@ -59,7 +59,7 @@ const PanelData = [
         title:
             'Componente Qualidade - Equipes Saúde da Família e Atenção Primária',
         url:
-            'https://datastudio.google.com/s/n64D-UVr0Zs', // link para painel Ciro - att 03/08
+            'https://datastudio.google.com/s/n64D-UVr0Zs', //painel desenvolvido por Ciro
         gradient:
             'indicadores'
     },
@@ -70,7 +70,7 @@ const PanelData = [
         title:
             'Componente Qualidade - Cadeia Pública e Consultório na Rua',
         url:
-            'https://datastudio.google.com/reporting/36276796-ecb1-4729-9a0e-daf059b68b5d',
+            'https://datastudio.google.com/reporting/36276796-ecb1-4729-9a0e-daf059b68b5d',//painel desenvolvido por Ciro
         gradient:
             'cadeia-consultorio-rua'
     },
@@ -81,7 +81,7 @@ const PanelData = [
         title:
             'Componente Vínculo e Acompanhamento Territorial',
         url:
-            'https://datastudio.google.com/reporting/1f15b7d3-a96b-4e16-834b-2971b73f4ccd',
+            'https://datastudio.google.com/reporting/1f15b7d3-a96b-4e16-834b-2971b73f4ccd', //painel desenvolvido por Ciro
         gradient:
             'vinculo-acompanhamento'
     },
@@ -91,13 +91,13 @@ const PanelData = [
         title:
             'Agendas e Absenteísmo',
         url:
-            'https://app.powerbi.com/view?r=eyJrIjoiMzNjZTRiZjktMDg2ZS00MDU5LTk3NWUtMmFmYTlhZGI0MjJjIiwidCI6ImUxOWVhYzBhLTJiZWEtNGYxMi04Yzg3LWNkNzk5YTg0MDhhZCJ9', // link para BI desenvolvido peli DIPIQ
+            'https://app.powerbi.com/view?r=eyJrIjoiMzNjZTRiZjktMDg2ZS00MDU5LTk3NWUtMmFmYTlhZGI0MjJjIiwidCI6ImUxOWVhYzBhLTJiZWEtNGYxMi04Yzg3LWNkNzk5YTg0MDhhZCJ9', // link para BI desenvolvido pelo DIPIQ
         gradient:
             'agendamentos'
     },
 ];
 
-// SEÇÃO DE MATERIAL DE APOIO
+// SEÇÃO DE MATERIAL DE APOIO - posteriormente entrará acervo de documentos, planilhas compartilhadas, etc.
 const SupportData = [
     {
         id: 'construcao',
@@ -113,17 +113,17 @@ const SupportData = [
 const renderCards = () => {
     const cardsGrid = document.getElementById('cards-grid');
     if (!cardsGrid) return;
-    
+
     let cardsHtml = '';
     PanelData.forEach((panel) => {
         cardsHtml += `
             <a href="${panel.url}" class="card ${panel.gradient}" target="_blank" rel="noopener noreferrer" aria-label="Abrir painel ${panel.title}" role="button" tabindex="0">
                 <div class="card-gradient"></div>
                 <h3 class="card-title">${panel.title}</h3>
-                        </a>
+            </a>
         `;
     });
-    
+
     cardsGrid.innerHTML = cardsHtml;
 };
 
@@ -142,7 +142,7 @@ const renderSupportCards = () => {
             </a>
         `;
     });
-    
+
     cardsGrid.innerHTML = cardsHtml;
 };
 
@@ -153,7 +153,7 @@ const renderCookieConsent = () => {
         if (consentContainer) consentContainer.innerHTML = '';
         return;
     }
-    
+
     const cookieHtml = `
         <div class="cookie-consent show">
             <div class="cookie-content">
@@ -186,7 +186,7 @@ const init = () => {
     setTimeout(() => {
         renderCookieConsent();
     }, 1000);
-    
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && document.querySelector('.cookie-consent.show')) {
             CookieManager.set('cookie_consent', 'true', 365);
