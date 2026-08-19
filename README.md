@@ -6,14 +6,15 @@ O **Portal DAS** é um site que reúne em um só lugar os painéis de dados e do
 
 A ideia é facilitar o acesso a informações de saúde do município para gestores, profissionais e cidadãos.
 
-## 🏛️ Divisões do Portal
+## 🗂️ Seções do Portal
 
-| Divisão | O que você encontra | Status |
+| Seção | O que você encontra | Status |
 |---|---|---|
-| **Atenção Básica (DAB)** | Indicadores de qualidade das equipes de Saúde da Família, vínculo territorial, agendas e absenteísmo | ✅ Disponível |
-| **Média Complexidade (DMC)** | Dados e documentos sobre serviços de média complexidade | 🚧 Em breve |
+| **Divisão de Atenção Básica** | Indicadores de qualidade das equipes de Saúde da Família, vínculo territorial, agendas e absenteísmo | ✅ Disponível |
+| **Divisão de Média Complexidade** | Dados, informações e documentos sobre serviços de média complexidade | 🚧 Em breve |
 | **Educação Permanente** | Materiais de capacitação e formação profissional em saúde | 🚧 Em breve |
-| **Pactuação Bipartite** | Indicadores pactuados entre o município e o estado (SES-RJ) | ✅ Disponível |
+| **Indicadores de Pactuação Bipartite** | Indicadores pactuados entre o município e o estado (SES-RJ) | ✅ Disponível |
+| **Documentos do Departamento** | Notas técnicas, protocolos, relatórios, manuais e outros documentos institucionais do Departamento de Atenção à Saúde | ✅ Disponível |
 
 ## 💡 Como funciona
 

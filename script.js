@@ -55,14 +55,14 @@ const AnimationManager = {
 const PortalData = [
     {
         id: 'dab',
-        title: 'Atenção Básica',
+        title: 'Divisão de Atenção Básica',
         description: 'Painéis, documentos e materiais de apoio da Divisão Atenção Básica.',
         url: '/pages/dab/index.html', // caminho atualizado
         gradient: 'dab'
     },
     {
         id: 'dmc',
-        title: 'Média Complexidade',
+        title: 'Divisão de Média Complexidade',
         description: 'Dados, informações e documentos sobre a Divisão de Média Complexidade. <br> EM CONSTRUÇÃO ⚠️',
         url: '/pages/dmc/index.html', //caminho atualizado
         gradient: 'dmc'
@@ -77,10 +77,18 @@ const PortalData = [
 
     {
         id: 'pactuacao',
-        title: 'Pactuação Bipartite',
+        title: 'Indicadores de Pactuação Bipartite',
         description: 'Dados sobre a pactuação bipartite no município.',
         url: 'https://lookerstudio.google.com/reporting/f1fbd188-4c7c-4814-959d-1d2279e60c55', // link atualizado 17/08/26 para looker dos indicadores.
         gradient: 'indicadores'
+    },
+
+    {
+        id: 'documentos',
+        title: 'Documentos',
+        description: 'Notas técnicas, protocolos, relatórios, manuais e outros documentos institucionais do Departamento de Atenção à Saúde.',
+        url: 'https://drive.google.com/drive/folders/1DApF3aMDhGdlFsBBspnILKvs3tLVUPpk?usp=drive_link', // link para pasta do drive contendo documentos do dept.
+        gradient: 'documentos'
     }
 ];
 
